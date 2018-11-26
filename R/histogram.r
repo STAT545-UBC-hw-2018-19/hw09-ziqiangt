@@ -1,4 +1,4 @@
-words <- readLines("words.txt")
+words <- readLines("./data/words.txt")
 Length <- nchar(words)
 hist_dat <- table(Length)
 write.table(hist_dat, "histogram.tsv",

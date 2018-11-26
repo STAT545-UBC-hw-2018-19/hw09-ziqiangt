@@ -1,20 +1,27 @@
-all: report.html
+all: data_dir report.html
 
 clean:
-	rm -f words.txt histogram.tsv histogram.png report.md report.html
+	rm -rf data *.tsv *.png report.md report.html
 
-report.html: report.rmd histogram.tsv histogram.png
+data_dir:
+	mkdir data
+
+report.html: report.rmd histogram.tsv histogram.png letter_frequency.tsv letter_frequency.png
 	Rscript -e 'rmarkdown::render("$<")'
 
 histogram.png: histogram.tsv
 	Rscript -e 'library(ggplot2); qplot(Length, Freq, data=read.delim("$<")); ggsave("$@")'
 	rm Rplots.pdf
 
-histogram.tsv: histogram.r words.txt
+histogram.tsv: ./R/histogram.r ./data/words.txt
+	Rscript $<
+	
+letter_frequency.tsv: ./R/letter_frequency.r ./data/words.txt
 	Rscript $<
 
-words.txt: /usr/share/dict/words
+./data/words.txt: /usr/share/dict/words
 	cp $< $@
 
-# words.txt:
-#	Rscript -e 'download.file("http://svnweb.freebsd.org/base/head/share/dict/web2?view=co", destfile = "words.txt", quiet = TRUE)'
+letter_frequency.png: letter_frequency.tsv
+	Rscript -e 'library(ggplot2); qplot(Letter_occuring, Freq, data=read.delim("$<")); ggsave("$@")'
+	rm Rplots.pdf

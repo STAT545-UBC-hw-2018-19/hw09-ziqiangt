@@ -1,6 +1,11 @@
-# English Word lengths
-Jenny Bryan  
-`r format(Sys.time(), '%d %B, %Y')`  
+---
+title: "English Word lengths"
+author: "Jenny Bryan"
+date: "26 November, 2018"
+output:
+  html_document:
+    keep_md: yes
+---
 
 
 

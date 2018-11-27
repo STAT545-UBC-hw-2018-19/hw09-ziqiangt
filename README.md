@@ -18,7 +18,7 @@ This assignment is to modify the make activity pipeline we made in
 class. You can go to
 **[report.html](https://raw.githack.com/STAT545-UBC-students/hw09-ziqiangt/master/report.html)**.
 The whole work is build by
-**[Makefile](https://github.com/STAT545-UBC-students/hw08-ziqiangt/tree/master/bcl/Makefile)**.
+**[Makefile](https://github.com/STAT545-UBC-students/hw09-ziqiangt/blob/master/Makefile)**.
 
 **My repository is structured as follows:**
 
@@ -28,13 +28,13 @@ The whole work is build by
 | [README.md](https://github.com/STAT545-UBC-students/hw09-ziqiangt/blob/master/README.md)     | the file you are currenly looking            |
 | [README.rmd](https://github.com/STAT545-UBC-students/hw09-ziqiangt/blob/master/README.Rmd)   | the README R-markdown file for homework 9    |
 | [report.md](https://github.com/STAT545-UBC-students/hw09-ziqiangt/blob/master/report.md)     | the markdown file for homework 9             |
-| [report.rmd](https://github.com/STAT545-UBC-students/hw09-ziqiangt/blob/master/report.Rmd)   | the R-markdown file for homework 9           |
-| [report.html](https://github.com/STAT545-UBC-students/hw09-ziqiangt/blob/master/report.html) | the R-markdown file for homework 9           |
-| [R](https://github.com/STAT545-UBC-students/hw08-ziqiangt/blob/master/bcl/R/)                | the R code used in this assignment           |
-| [python](https://github.com/STAT545-UBC-students/hw08-ziqiangt/tree/master/python)           | the R code used in this assignment           |
-| [results](https://github.com/STAT545-UBC-students/hw08-ziqiangt/tree/master/bcl/results)     | the .tsv data generated from the R code      |
-| [image](https://github.com/STAT545-UBC-students/hw08-ziqiangt/tree/master/bcl/image)         | the .tsv data generated from the R code      |
-| [data](https://github.com/STAT545-UBC-students/hw08-ziqiangt/tree/master/bcl/data)           | the input words.txt file                     |
+| [report.rmd](https://github.com/STAT545-UBC-students/hw09-ziqiangt/blob/master/report.rmd)   | the R-markdown file for homework 9           |
+| [report.html](https://raw.githack.com/STAT545-UBC-students/hw09-ziqiangt/master/report.html) | the html file for homework 9                 |
+| [R](https://github.com/STAT545-UBC-students/hw09-ziqiangt/tree/master/R)                     | the R code used in this assignment           |
+| [python](https://github.com/STAT545-UBC-students/hw09-ziqiangt/tree/master/python)           | the R code used in this assignment           |
+| [results](https://github.com/STAT545-UBC-students/hw09-ziqiangt/tree/master/bcl/results)     | the .tsv data generated from the R code      |
+| [image](https://github.com/STAT545-UBC-students/hw09-ziqiangt/tree/master/bcl/image)         | the .tsv data generated from the R code      |
+| [data](https://github.com/STAT545-UBC-students/hw09-ziqiangt/tree/master/bcl/data)           | the input words.txt file                     |
 | Other                                                                                        | Other files such a .Rproj and .gitignore     |
 
 Makefile structure

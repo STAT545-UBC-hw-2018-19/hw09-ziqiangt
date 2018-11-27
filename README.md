@@ -16,7 +16,7 @@ Overview
 
 This assignment is to modify the make activity pipeline we made in
 class. You can go to
-**[report.html](file://localhost/Users/apple/Desktop/STAT545/hw0922/hw09-ziqiangt/report.html)**.
+**[report.html](https://raw.githack.com/STAT545-UBC-students/hw09-ziqiangt/master/report.html)**.
 The whole work is build by
 **[Makefile](https://github.com/STAT545-UBC-students/hw08-ziqiangt/tree/master/bcl/Makefile)**.
 

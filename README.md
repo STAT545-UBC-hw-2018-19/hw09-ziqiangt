@@ -32,9 +32,9 @@ The whole work is build by
 | [report.html](https://raw.githack.com/STAT545-UBC-students/hw09-ziqiangt/master/report.html) | the html file for homework 9                 |
 | [R](https://github.com/STAT545-UBC-students/hw09-ziqiangt/tree/master/R)                     | the R code used in this assignment           |
 | [python](https://github.com/STAT545-UBC-students/hw09-ziqiangt/tree/master/python)           | the R code used in this assignment           |
-| [results](https://github.com/STAT545-UBC-students/hw09-ziqiangt/tree/master/bcl/results)     | the .tsv data generated from the R code      |
-| [image](https://github.com/STAT545-UBC-students/hw09-ziqiangt/tree/master/bcl/image)         | the .tsv data generated from the R code      |
-| [data](https://github.com/STAT545-UBC-students/hw09-ziqiangt/tree/master/bcl/data)           | the input words.txt file                     |
+| [results](https://github.com/STAT545-UBC-students/hw09-ziqiangt/tree/master/results)         | the .tsv data generated from the R code      |
+| [image](https://github.com/STAT545-UBC-students/hw09-ziqiangt/tree/master/image)             | the .tsv data generated from the R code      |
+| [data](https://github.com/STAT545-UBC-students/hw09-ziqiangt/tree/master/data)               | the input words.txt file                     |
 | Other                                                                                        | Other files such a .Rproj and .gitignore     |
 
 Makefile structure

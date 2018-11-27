@@ -45,3 +45,8 @@ makefile.png: ./python/makefile2dot.py Makefile
 
 README.md: README.rmd 
 	Rscript -e 'rmarkdown::render("$<")'
+
+GIT_upload:
+	git add "*"
+	git commit -m "*"
+	git push

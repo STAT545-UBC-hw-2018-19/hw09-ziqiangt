@@ -17,4 +17,8 @@ The most frequent word length is 9.
 
 Here is a histogram of word lengths.
 
-![*Fig. 1* A histogram of English word lengths](histogram.png)
+![*Fig. 1* A histogram of English word lengths](./image/histogram.png)
+
+Here is a histogram of Letter Frequency
+
+![*Fig. 2* A histogram of English letters frequency](./image/letter_frequency.png)

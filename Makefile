@@ -1,4 +1,4 @@
-all: data_dir report.html seperate_files
+all: data_dir report.html
 
 clean:
 	rm -rf data results image report.md report.html
@@ -9,7 +9,8 @@ data_dir:
 	mkdir results
 	mkdir image
 
-report.html: report.rmd histogram.tsv histogram.png letter_frequency.tsv letter_frequency.png
+report.html: report.rmd histogram.tsv histogram.png \
+						 letter_frequency.tsv letter_frequency.png 
 	Rscript -e 'rmarkdown::render("$<")'
 
 histogram.png: histogram.tsv
@@ -28,7 +29,7 @@ letter_frequency.tsv: ./R/letter_frequency.r ./data/words.txt
 letter_frequency.png: letter_frequency.tsv
 	Rscript -e 'library(ggplot2); qplot(Letter_occuring, Freq, data=read.delim("$<")); ggsave("$@")'
 	rm Rplots.pdf
-
-seperate_files:
+	
+	## move the results into thier own folder
 	mv *.tsv results
 	mv *.png image

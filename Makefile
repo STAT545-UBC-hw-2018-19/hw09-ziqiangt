@@ -1,4 +1,4 @@
-all: data_dir report.html
+all: data_dir report.html 
 
 clean:
 	rm -rf data results image report.md report.html
@@ -10,7 +10,8 @@ data_dir:
 	mkdir image
 
 report.html: report.rmd histogram.tsv histogram.png \
-						 letter_frequency.tsv letter_frequency.png 
+						 letter_frequency.tsv letter_frequency.png \
+						 makefile.png
 	Rscript -e 'rmarkdown::render("$<")'
 
 histogram.png: histogram.tsv
@@ -19,13 +20,12 @@ histogram.png: histogram.tsv
 
 histogram.tsv: ./R/histogram.r ./data/words.txt
 	Rscript $<
-	
+
+## Count the freuquency of the letter
 letter_frequency.tsv: ./R/letter_frequency.r ./data/words.txt
 	Rscript $<
 
-./data/words.txt: /usr/share/dict/words
-	cp $< $@
-
+## visualize the results in histogram form
 letter_frequency.png: letter_frequency.tsv
 	Rscript -e 'library(ggplot2); qplot(Letter_occuring, Freq, data=read.delim("$<")); ggsave("$@")'
 	rm Rplots.pdf
@@ -33,3 +33,11 @@ letter_frequency.png: letter_frequency.tsv
 	## move the results into thier own folder
 	mv *.tsv results
 	mv *.png image
+
+## copy the words file in the working directory
+./data/words.txt: /usr/share/dict/words
+	cp $< $@
+
+##Let's visualize the makefile structure
+makefile.png: ./python/makefile2dot.py Makefile
+	python $< <$(word 2, $^) |dot -Tpng > ./image/$@

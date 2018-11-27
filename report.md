@@ -15,6 +15,9 @@ I computed the length of each word, i.e. the number of characters, and tabulated
 
 The most frequent word length is 9.
 
+Here is a structure of the makefile.
+![*Fig. 0* A histogram of English word lengths](./image/makefile.png)
+
 Here is a histogram of word lengths.
 
 ![*Fig. 1* A histogram of English word lengths](./image/histogram.png)

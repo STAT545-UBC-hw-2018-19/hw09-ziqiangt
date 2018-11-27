@@ -1,7 +1,7 @@
 all: data_dir report.html 
 
 clean:
-	rm -rf data results image report.md report.html
+	rm -rf data results image report.md report.html *.png *.tsv
 
 # Store the results in different folder
 data_dir:

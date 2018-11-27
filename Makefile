@@ -40,13 +40,15 @@ letter_frequency.png: letter_frequency.tsv
 ./data/words.txt: /usr/share/dict/words
 	cp $< $@
 
-##Let's visualize the makefile structure
+## Visualize the makefile structure
 makefile.png: ./python/makefile2dot.py Makefile
 	python $< <$(word 2, $^) |dot -Tpng > ./image/$@
 
+## Make the knit the README.rmd
 README.md: README.rmd 
 	Rscript -e 'rmarkdown::render("$<")'
 
+## commit and push the file into github
 GIT_upload:
 	git add "*"
 	git commit -m "*"

@@ -12,7 +12,8 @@ data_dir:
 report.html: report.rmd histogram.tsv histogram.png \
 						 letter_frequency.tsv letter_frequency.png \
 						 makefile.png \
-						 README.md
+						 README.md \
+						 GIT_upload
 	Rscript -e 'rmarkdown::render("$<")'
 
 histogram.png: histogram.tsv

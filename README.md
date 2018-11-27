@@ -1,17 +1,93 @@
-make-activity
-=============
+-   [STAT 545A Homework 09 Repo owned by Ziqiang
+    Tang](#stat-545a-homework-09-repo-owned-by-ziqiang-tang)
+    -   [Overview](#overview)
+    -   [Makefile structure](#makefile-structure)
+    -   [References](#references)
+    -   [Here is my previous homework if you are
+        interested](#here-is-my-previous-homework-if-you-are-interested)
+    -   [It’s would be very kind if you could give me some
+        **comments**.](#its-would-be-very-kind-if-you-could-give-me-some-comments.)
 
-The commit history of this repository reflects what a student might do as she works through [this activity](http://stat545-ubc.github.io/automation04_make-activity.html) from [STAT 545](http://stat545-ubc.github.io). This fully developed example shows:
+STAT 545A Homework 09 Repo owned by Ziqiang Tang
+================================================
 
-  * How to run an R script non-interactively
-  * How to use `make`
-    - to record which files are inputs vs. intermediates vs. outputs
-    - to capture how scripts and commands convert inputs to outputs
-    - to re-run parts of an analysis that are out-of-date
-  * The intersection of R and `make`, i.e. how to
-    - run snippets of R code
-    - run an entire R script
-    - render an R Markdown document (or R script)
-  * The interface between RStudio and `make`
-  * How to use `make` from the shell
-  * How Git facilitates the process of building a pipeline
+Overview
+--------
+
+This assignment is to modify the make activity pipeline we made in
+class. You can go to
+**[report.html](https://github.com/STAT545-UBC-students/hw09-ziqiangt/blob/master/report.html)**.
+The whole work is build by
+**[Makefile](https://github.com/STAT545-UBC-students/hw08-ziqiangt/tree/master/bcl/Makefile)**.
+
+**My repository is structured as follows:**
+
+| Documents                                                                                    | Description                                  |
+|----------------------------------------------------------------------------------------------|----------------------------------------------|
+| [Makefile](https://github.com/STAT545-UBC-students/hw08-ziqiangt/tree/master/bcl/Makefile)   | the Makefile used to build the whold project |
+| [README.md](https://github.com/STAT545-UBC-students/hw09-ziqiangt/blob/master/README.md)     | the file you are currenly looking            |
+| [README.rmd](https://github.com/STAT545-UBC-students/hw09-ziqiangt/blob/master/README.Rmd)   | the README R-markdown file for homework 9    |
+| [report.md](https://github.com/STAT545-UBC-students/hw09-ziqiangt/blob/master/report.md)     | the markdown file for homework 9             |
+| [report.rmd](https://github.com/STAT545-UBC-students/hw09-ziqiangt/blob/master/report.Rmd)   | the R-markdown file for homework 9           |
+| [report.html](https://github.com/STAT545-UBC-students/hw09-ziqiangt/blob/master/report.html) | the R-markdown file for homework 9           |
+| [R](https://github.com/STAT545-UBC-students/hw08-ziqiangt/blob/master/bcl/R/)                | the R code used in this assignment           |
+| [python](https://github.com/STAT545-UBC-students/hw08-ziqiangt/tree/master/python)           | the R code used in this assignment           |
+| [results](https://github.com/STAT545-UBC-students/hw08-ziqiangt/tree/master/bcl/results)     | the .tsv data generated from the R code      |
+| [image](https://github.com/STAT545-UBC-students/hw08-ziqiangt/tree/master/bcl/image)         | the .tsv data generated from the R code      |
+| [data](https://github.com/STAT545-UBC-students/hw08-ziqiangt/tree/master/bcl/data)           | the input words.txt file                     |
+| Other                                                                                        | Other files such a .Rproj and .gitignore     |
+
+Makefile structure
+------------------
+
+\*\*This struture is generated with the help of [lindenbe’s Python
+scripts](https://github.com/vak/makefile2dot). You may need to use these
+two codes to install Graphviz:
+
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    brew install graphviz
+
+The makefile structure is shown as below:\*\*
+
+![](./image/makefile.png)
+
+References
+----------
+
+-   [Automatic
+    Variables](https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html)
+
+Here is my previous homework if you are interested
+--------------------------------------------------
+
+-   You can click to go to my homework solutions
+    -   homework01
+        -   [homework01
+            solution](https://github.com/STAT545-UBC-students/hw01-ziqiangt)
+    -   homework02
+        -   [homework02
+            solution](https://github.com/STAT545-UBC-students/hw02-ziqiangt)
+    -   homework03
+        -   [homework03
+            solution](https://github.com/STAT545-UBC-students/hw03-ziqiangt)
+    -   homework04
+        -   [homework04
+            solution](https://github.com/STAT545-UBC-students/hw04-ziqiangt)
+    -   homework05
+        -   [homework05
+            solution](https://github.com/STAT545-UBC-students/hw05-ziqiangt)
+    -   homework06
+        -   [homework06
+            solution](https://github.com/STAT545-UBC-students/hw06-ziqiangt)
+    -   homework07
+        -   [homework07
+            solution](https://github.com/STAT545-UBC-students/hw07-ziqiangt)
+    -   homework08
+        -   [homework08
+            solution](https://github.com/STAT545-UBC-students/hw08-ziqiangt)
+
+It’s would be very kind if you could give me some **comments**.
+---------------------------------------------------------------
+
+**[homework09
+Comments](https://github.com/STAT545-UBC-students/hw09-ziqiangt/issues)**

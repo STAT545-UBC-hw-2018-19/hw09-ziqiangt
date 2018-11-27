@@ -1,7 +1,7 @@
 all: data_dir report.html 
 
 clean:
-	rm -rf data results image report.md report.html *.png *.tsv
+	rm -rf data results image report.md report.html *.png *.tsv README.md
 
 # Store the results in different folder
 data_dir:
@@ -11,7 +11,8 @@ data_dir:
 
 report.html: report.rmd histogram.tsv histogram.png \
 						 letter_frequency.tsv letter_frequency.png \
-						 makefile.png
+						 makefile.png \
+						 README.md
 	Rscript -e 'rmarkdown::render("$<")'
 
 histogram.png: histogram.tsv
@@ -41,3 +42,6 @@ letter_frequency.png: letter_frequency.tsv
 ##Let's visualize the makefile structure
 makefile.png: ./python/makefile2dot.py Makefile
 	python $< <$(word 2, $^) |dot -Tpng > ./image/$@
+
+README.md: README.rmd 
+	Rscript -e 'rmarkdown::render("$<")'

@@ -29,7 +29,7 @@ letter_frequency.tsv: ./R/letter_frequency.r ./data/words.txt
 
 ## visualize the results in histogram form
 letter_frequency.png: letter_frequency.tsv
-	Rscript -e 'library(ggplot2); qplot(Letter_occuring, Freq, data=read.delim("$<"), geom = "dotplot"); ggsave("$@")'
+	Rscript -e 'library(ggplot2); qplot(Letter_occuring, Freq, data=read.delim("$<"), size = Freq); ggsave("$@")'
 	rm Rplots.pdf
 	
 	## move the results into thier own folder
